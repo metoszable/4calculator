@@ -2,16 +2,18 @@
 <html>
 	<body>
 		<h1>4Calculator - Health calculator for jewellery</h1>
-		<h1 id="answer"></h1>
 		
 		<br>
-		Endurance <input type="text" id="num1">
+		Endurance <input type="number" id="num1" min="0" max="52" value="0">
 		<br>
 		<br>
-		Base health <input type="text" id="num2">
+		Base health <input type="number" id="num2" min="0" max="653" value="0">
 		<br>
 		<br>
 		<button onclick="calculate()">Calculate</button>
+		<br>
+		<br>
+		<h1 id="answer"></h1>
 		
 		<script>
 		function calculate()
