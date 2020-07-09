@@ -4,10 +4,10 @@
 		<h1>4Calculator - Health calculator for jewellery</h1>
 		
 		<br>
-		Endurance <input type="number" id="num1" min="0" max="52" value="0">
+		Endurance <input type="number" id="num1" min="0" max="52" value="0" required>
 		<br>
 		<br>
-		Base health <input type="number" id="num2" min="0" max="653" value="0">
+		Base health <input type="number" id="num2" min="0" max="653" value="0" required>
 		<br>
 		<br>
 		<button onclick="calculate()">Calculate</button>
@@ -24,9 +24,12 @@
 			
 			var result=parseFloat(field1)*parseFloat(endurance)+parseFloat(field2);
 			
-			if(!isNaN(result))
+			if (field1 < 53 && field2 < 654)	
 			{
-				document.getElementById("answer").innerHTML="The answer is "+result;
+				if(!isNaN(result))
+				{
+					document.getElementById("answer").innerHTML="The answer is "+result;
+				}
 			}
 		}
 		</script>
