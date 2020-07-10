@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>4Calculator - Damage per intelligence calculator for jewellery</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>4Calculator - Damage per intelligence calculator for jewellery</h1>
+		<h3>By Metosz</h3>
+		
+		<br>
+		Intelligence (0-52) <input type="number" id="num1" min="0" max="52" value="0" required>
+		<br>
+		<br>
+		<button onclick="calculate()">Calculate</button>
+		<br>
+		<h2 id="answer"></h2>
+		<br>
+		<a href="index.html">Back to main page →</a>
+		<br>
+		<br>
+		Copyright © 2020 Mateusz Graliński 
+		<script>
+		function calculate()
+		{
+			var field1 = document.getElementById("num1").value;
+			var intelligence = 2.8119;
+			
+			var result=parseFloat(field1)*parseFloat(intelligence);
+			
+			if (field1 < 53)	
+			{
+				if(!isNaN(result))
+				{
+					document.getElementById("answer").innerHTML="The answer is "+result;
+				}
+			}
+			if (field1 >= 53)	
+			{
+				if(!isNaN(result))
+				{
+					document.getElementById("answer").innerHTML="The value of intelligence is too high";
+				}
+			}
+		}
+		</script>
+	</body>
+</html>
