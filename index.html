@@ -9,16 +9,18 @@
 		<h3>By Metosz</h3>
 		
 		<br>
-		Endurance <input type="number" id="num1" min="0" max="52" value="0" required>
+		Endurance (0-52) <input type="number" id="num1" min="0" max="52" value="0" required>
 		<br>
 		<br>
-		Base health <input type="number" id="num2" min="0" max="653" value="0">
+		Base health (0-653) <input type="number" id="num2" min="0" max="653" value="0">
 		<br>
 		<br>
 		<button onclick="calculate()">Calculate</button>
 		<br>
 		<br>
 		<h1 id="answer"></h1>
+		<br>
+		<br>
 		
 		<script>
 		function calculate()
@@ -34,6 +36,13 @@
 				if(!isNaN(result))
 				{
 					document.getElementById("answer").innerHTML="The answer is "+result;
+				}
+			}
+			if (field1 >= 53 || field2 >= 654)	
+			{
+				if(!isNaN(result))
+				{
+					document.getElementById("answer").innerHTML="The value of endurance or base health is too high";
 				}
 			}
 		}
